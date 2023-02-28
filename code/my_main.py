@@ -56,6 +56,7 @@ def my_main(new_benchmark,
     print("num_cores = " + str(num_cores))
     print("num_rows = " + str(num_rows))
     print("num_columns = " + str(num_columns))
+    print("percentage_mines = " + str(percentage_mines))
     print("Total Time = " + str(total_time))
 
 
@@ -107,15 +108,15 @@ if __name__ == '__main__':
         # Value 4. Benchmark -> Distributed; Single_File -> Distributed.
         # This mode is not supporting by multi-threading in Python, as it triggers the following exception:
         # AssertionError: daemonic processes are not allowed to have children
-        execution_mode = 2
+        execution_mode = 3
 
         # III. We get the number of files and number of cores
         num_files = 20
         num_cores = 4
 
         # IV. We get the structure of each file
-        num_rows = 20
-        num_columns = 20
+        num_rows = 400
+        num_columns = 400
         percentage_mines = 30
 
     # 2. We assert that the entries were correct
